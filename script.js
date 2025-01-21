@@ -2,7 +2,7 @@ let memberButton = document.getElementById(`member`)
 let information = document.getElementById(`information`)
 let events = document.getElementById(`events`)
 let eventsContainer = document.getElementById(`eventsContainer`)
-let currentEvents = [{what: `Computer Science Carnival`, where: `Olathe South Commons`, when: `February 1st, : to :`}]
+let currentEvents = [{what: `Computer Science Carnival`, where: `Olathe South Commons`, when: `February 1st, 7:30 AM to 2:30 PM`}]
 
 function member() {
     information.style.display = `inline-flex`
