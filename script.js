@@ -2,12 +2,16 @@ let memberButton = document.getElementById(`member`)
 let information = document.getElementById(`information`)
 let events = document.getElementById(`events`)
 let eventsContainer = document.getElementById(`eventsContainer`)
-let currentEvents = [{what: `Computer Science Carnival`, where: `Olathe South Commons`, when: `February 1st, 8:30 AM to 1:00 PM`}]
+let noEvents = document.getElementById(`noEvents`)
+let moreInformation = document.getElementById(`moreInformation`)
+let currentEvents = []
 
 function member() {
     information.style.display = `inline-flex`
     events.style.display = `unset`
+    moreInformation.style.paddingLeft = `min(3.75vw, 5vh)`
     eventsContainer.innerHTML = ``
+    if (currentEvents.length == 0) noEvents.style.display = `unset`
     for (let currentEvent of currentEvents) {
         let eventName = document.createElement(`strong`)
         eventName.style.fontSize = `min(3vw, 4vh)`
@@ -25,4 +29,5 @@ function member() {
 function nonMember() {
     information.style.display = `inline-flex`
     events.style.display = `none`
+    moreInformation.style.paddingLeft = ``
 }
