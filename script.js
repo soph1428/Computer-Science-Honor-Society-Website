@@ -4,6 +4,8 @@ let events = document.getElementById(`events`)
 let eventsContainer = document.getElementById(`eventsContainer`)
 let noEvents = document.getElementById(`noEvents`)
 let moreInformation = document.getElementById(`moreInformation`)
+let eligibilityText = document.getElementById(`eligibilityText`)
+let applicationLink = document.getElementById(`applicationLink`)
 let currentEvents = []
 
 function member() {
@@ -11,6 +13,8 @@ function member() {
     events.style.display = `unset`
     moreInformation.style.paddingLeft = `min(3.75vw, 5vh)`
     eventsContainer.innerHTML = ``
+    applicationLink.hidden = true
+    eligibilityText.textContent = eligibilityText.textContent.replaceAll(`Members`, `You`)
     if (currentEvents.length == 0) noEvents.style.display = `unset`
     for (let currentEvent of currentEvents) {
         let eventName = document.createElement(`strong`)
@@ -30,4 +34,6 @@ function nonMember() {
     information.style.display = `inline-flex`
     events.style.display = `none`
     moreInformation.style.paddingLeft = ``
+    applicationLink.hidden = false
+    eligibilityText.textContent = eligibilityText.textContent.replaceAll(`You`, `Members`)
 }
