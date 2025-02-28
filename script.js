@@ -9,7 +9,8 @@ let applicationLink = document.getElementById(`applicationLink`)
 let currentEvents = [{what: `8th Grade Activity Fair`, where: `Olathe South Aux Gym`, when: `March 4th, 10:10 AM - 12:35 PM<br>Sophia Groth and Miles Knapp`}]
 
 function member() {
-    information.style.display = `inline-flex`
+    information.style.display = `flex`
+    information.style.justifyContent = `center`
     document.body.querySelectorAll(`*`).forEach((elem) => {
         if (elem.className == `member`) {
             elem.style.display = `unset`
@@ -32,10 +33,11 @@ function member() {
 }
 
 function nonMember() {
-    information.style.display = `inline-flex`
+    information.style.display = `flex`
+    information.style.justifyContent = `center`
     document.body.querySelectorAll(`*`).forEach((elem) => {
         if (elem.className == `member`) {
             elem.style.display = `none`
-        } else if (elem.tagName != `SCRIPT` && elem.id != eventsContainer.id) elem.style.display = `unset`
+        } if (elem.className == `nonmember`) elem.style.display = `unset`
     }); eligibilityText.textContent = eligibilityText.textContent.replaceAll(`You`, `Members`)
 }
