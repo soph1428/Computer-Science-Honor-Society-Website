@@ -27,7 +27,7 @@ function member() {
         let eventTime = document.createElement(`label`)
         eventTime.style.fontSize = `min(3vw, 4vh)`
         eventTime.innerHTML = currentEvent.when
-        eventsContainer.append(document.createElement(`br`), eventName, document.createElement(`br`), eventLocation, document.createElement(`br`), eventTime)
+        eventsContainer.append(eventName, document.createElement(`br`), eventLocation, document.createElement(`br`), eventTime)
     }
 }
 
