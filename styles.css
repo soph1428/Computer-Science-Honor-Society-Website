@@ -1,0 +1,5 @@
+button {
+    background-color: lightblue;
+} button:hover {
+    background-color: palegoldenrod;
+}
