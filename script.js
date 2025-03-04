@@ -1,16 +1,14 @@
-let memberButton = document.getElementById(`member`)
 let information = document.getElementById(`information`)
-let events = document.getElementById(`events`)
 let eventsContainer = document.getElementById(`eventsContainer`)
 let noEvents = document.getElementById(`noEvents`)
 let moreInformation = document.getElementById(`moreInformation`)
 let eligibilityText = document.getElementById(`eligibilityText`)
-let applicationLink = document.getElementById(`applicationLink`)
-let currentEvents = [{what: `8th Grade Activity Fair`, where: `Olathe South Aux Gym`, when: `March 4th, 10:10 AM - 12:35 PM<br>Sophia Groth and Miles Knapp`}]
+let currentEvents = [{what: `8th Grade Activity Fair`, where: `Olathe South Aux Gym`, when: `March 4th, 10:10 AM - 12:35 PM`}]
 
 function member() {
     information.style.display = `flex`
     information.style.justifyContent = `center`
+    moreInformation.style.paddingLeft = `min(3.75vw, 5vh)`
     document.body.querySelectorAll(`*`).forEach((elem) => {
         if (elem.className == `member`) {
             elem.style.display = `unset`
@@ -35,6 +33,7 @@ function member() {
 function nonMember() {
     information.style.display = `flex`
     information.style.justifyContent = `center`
+    moreInformation.style.paddingLeft = ``
     document.body.querySelectorAll(`*`).forEach((elem) => {
         if (elem.className == `member`) {
             elem.style.display = `none`
