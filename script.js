@@ -3,7 +3,7 @@ let eventsContainer = document.getElementById(`eventsContainer`)
 let noEvents = document.getElementById(`noEvents`)
 let moreInformation = document.getElementById(`moreInformation`)
 let eligibilityText = document.getElementById(`eligibilityText`)
-let currentEvents = []
+let currentEvents = [{what: "Social", where: "Olathe South Falcons Nest", when: "April 22, 6:00 PM - 8:00 PM"}]
 
 function member() {
     information.style.display = `flex`
@@ -17,7 +17,7 @@ function member() {
     eligibilityText.textContent = eligibilityText.textContent.replaceAll(`Members`, `You`)
     if (currentEvents.length == 0) noEvents.style.display = `unset`
     for (let currentEvent of currentEvents) {
-        let eventName = ~document.createElement(`strong`)
+        let eventName = document.createElement(`strong`)
         eventName.style.fontSize = `min(3vw, 4vh)`
         eventName.innerHTML = currentEvent.what
         let eventLocation = document.createElement(`label`)
