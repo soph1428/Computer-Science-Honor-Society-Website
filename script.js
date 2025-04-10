@@ -9,6 +9,7 @@ function member() {
     information.style.display = `flex`
     information.style.justifyContent = `center`
     moreInformation.style.paddingLeft = `min(3.75vw, 5vh)`
+    scrollTo(0, document.body.scrollHeight / 3)
     document.body.querySelectorAll(`*`).forEach((elem) => {
         if (elem.className == `member`) {
             elem.style.display = `unset`
@@ -34,6 +35,7 @@ function nonMember() {
     information.style.display = `flex`
     information.style.justifyContent = `center`
     moreInformation.style.paddingLeft = ``
+    scrollTo(0, document.body.scrollHeight / 3)
     document.body.querySelectorAll(`*`).forEach((elem) => {
         if (elem.className == `member`) {
             elem.style.display = `none`
