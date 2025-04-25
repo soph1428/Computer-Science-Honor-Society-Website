@@ -3,7 +3,7 @@ let eventsContainer = document.getElementById(`eventsContainer`)
 let noEvents = document.getElementById(`noEvents`)
 let moreInformation = document.getElementById(`moreInformation`)
 let eligibilityText = document.getElementById(`eligibilityText`)
-let currentEvents = [{what: "Social", where: "Olathe South Falcons Nest", when: "April 22, 6:00 PM - 8:00 PM"}]
+let currentEvents = []
 
 function member() {
     information.style.display = `flex`
