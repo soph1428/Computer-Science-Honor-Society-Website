@@ -3,7 +3,7 @@ let eventsContainer = document.getElementById(`eventsContainer`)
 let noEvents = document.getElementById(`noEvents`)
 let moreInformation = document.getElementById(`moreInformation`)
 let eligibilityText = document.getElementById(`eligibilityText`)
-let currentEvents = []
+let currentEvents = [{what: `Induction Ceremony`, where: `Library`, when: `November 11th, 7:00 PM - 8:00 PM`}]
 
 function member() {
     information.style.display = `flex`
