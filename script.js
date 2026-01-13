@@ -3,7 +3,7 @@ let eventsContainer = document.getElementById(`eventsContainer`)
 let noEvents = document.getElementById(`noEvents`)
 let moreInformation = document.getElementById(`moreInformation`)
 let eligibilityText = document.getElementById(`eligibilityText`)
-let currentEvents = []
+let currentEvents = [{what: `Computer Science Carnival`, where: `Olathe South Commons`, when: `10:00 AM - 12:00 PM, February 21, 2026`}]
 
 function member() {
     information.style.display = `flex`
