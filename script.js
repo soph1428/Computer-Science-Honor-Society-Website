@@ -3,7 +3,7 @@ let eventsContainer = document.getElementById(`eventsContainer`)
 let noEvents = document.getElementById(`noEvents`)
 let moreInformation = document.getElementById(`moreInformation`)
 let eligibilityText = document.getElementById(`eligibilityText`)
-let currentEvents = [{what: `8th Grade Activity Fair`, where: `Olathe South Aux Gym`, when: `10:15 AM - 12:35 PM, March 3, 2026`}]
+let currentEvents = []
 
 function member() {
     information.style.display = `flex`
