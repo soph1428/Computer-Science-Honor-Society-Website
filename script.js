@@ -3,7 +3,10 @@ let eventsContainer = document.getElementById(`eventsContainer`)
 let noEvents = document.getElementById(`noEvents`)
 let moreInformation = document.getElementById(`moreInformation`)
 let eligibilityText = document.getElementById(`eligibilityText`)
-let currentEvents = []
+let currentEvents = [{what: "Hy-Vee Bagging Fundraiser",
+    where: "14955 W 151st St, Olathe, KS 66062",
+    when: "November 8, 8:00 AM - 12:00 PM",
+    desc: "Wear a computer science shirt or an Olathe South shirt if you've lost your academy and carnival shirts. Bring tip jars!"}]
 
 function member() {
     information.style.display = `flex`
@@ -27,7 +30,10 @@ function member() {
         let eventTime = document.createElement(`label`)
         eventTime.style.fontSize = `min(3vw, 4vh)`
         eventTime.innerHTML = currentEvent.when
-        eventsContainer.append(eventName, document.createElement(`br`), eventLocation, document.createElement(`br`), eventTime)
+        let eventDesc = document.createElement(`label`)
+        eventDesc.style.fontSize = `min(3vw, 4vh)`
+        eventDesc.innerHTML = currentEvent.desc
+        eventsContainer.append(eventName, document.createElement(`br`), eventLocation, document.createElement(`br`), eventTime, document.createElement(`br`), eventDesc)
     }
 }
 
